@@ -13,7 +13,7 @@ class Workshops extends React.Component {
   render() {
     return (
       <div>
-        <div className="featurette">
+        <div className=" featurette">
           <div className="featurette-inner text-center">
             <form role="form" className="search">
               <h3 className="no-margin-top h1">Workshops</h3>

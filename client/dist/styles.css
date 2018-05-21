@@ -127,3 +127,45 @@ h2 {
 .dancerinfo {
   padding-bottom:10px;
 }
+
+
+
+.modal {
+    position: fixed; /* Stay in place */
+    z-index: 5; /* Sit on top */
+    padding-top: 25px; /* Location of the box */
+    display:flex;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background: #333; /* Fallback color */
+    background: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+
+.modal-video {
+    margin: 5px 0px 25px 200px;
+    padding: 0px;
+    width: 70%;
+    height: 90%;
+    text-align: center;
+}
+
+.dancerinfo .name{
+  font-weight: bold;
+  font-size: 30px;
+  color: black
+}
+
+.workshopinfo .title{
+  font-weight: bold;
+  font-size: 30px;
+  color: black
+}
+
+.competitioninfo .title{
+  font-weight: bold;
+  font-size: 30px;
+  color: black
+}

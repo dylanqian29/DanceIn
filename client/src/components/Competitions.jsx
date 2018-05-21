@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import Competition from './Competition.jsx'
 
 class Competitions extends React.Component {
   constructor(props) {
@@ -25,9 +25,9 @@ class Competitions extends React.Component {
             </form>
           </div>
         </div>
-        {/* <div>
-          <Workshop />
-        </div> */}
+        <div>
+          <Competition />
+        </div>
       </div>
     )
   }

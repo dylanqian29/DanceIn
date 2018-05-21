@@ -19,6 +19,7 @@ class Dancers extends React.Component {
           rating: 5.0,
           choreoSong: 'Location - Khalid',
           choreoLink:'https://www.youtube.com/watch?v=4_pg4pkopuk',
+          choreoId: '4_pg4pkopuk',
         },
         {
           id: 1,
@@ -30,6 +31,7 @@ class Dancers extends React.Component {
           rating: 5.0,
           choreoSong: "Can't Stop The Feeling - Justin Timberlake",
           choreoLink: 'https://www.youtube.com/watch?v=dX53hWaYNd8',
+          choreoId: 'dX53hWaYNd8',
         },
       ]
     }
