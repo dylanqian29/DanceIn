@@ -14,7 +14,7 @@ app.use(express.static(__dirname + '/../client/dist'));
 // app.use(express.static(__dirname + '/../node_modules'));
 
 app.get('*', function (request, response) {
-  response.sendFile(path.resolve(__dirname, '../client/dist', 'index.html'))
+  response.sendFile(path.join(__dirname, '../client/dist', 'index.html'))
 })
 
 

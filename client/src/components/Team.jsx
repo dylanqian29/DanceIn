@@ -1,5 +1,6 @@
 import React from 'react';
 import VideoModal from './VideoModal.jsx';
+import {Link} from 'react-router-dom';
 
 class Team extends React.Component {
 
@@ -35,7 +36,7 @@ class Team extends React.Component {
               <img src={this.props.team.teamPic} onClick={this.openModal} alt="competition" width="200" height="200" />
             </div>
             <div className=" col-md-9 workshopinfo">
-              <h3 className='teaminfo title '> {this.props.team.name} </h3>
+              <Link to={`/teams/${this.props.team.id}`} className='teaminfo title'> {this.props.team.name} </Link>
               <div className='teaminfo description'> Description: {this.props.team.description} </div>
               <div className='teaminfo rating'> Rating: {this.props.team.rating}/5.0</div>
               {this.state.isOpen && (

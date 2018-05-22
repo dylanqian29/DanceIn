@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Dancer from './Dancer.jsx';
-import { Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 import dummyPeople from '../../../database-mongo/dummyPeople.js'
 
 class Dancers extends React.Component {

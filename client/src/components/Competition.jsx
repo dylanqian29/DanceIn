@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 class Competition extends React.Component {
 
   constructor(props) {
@@ -36,8 +36,7 @@ class Competition extends React.Component {
               <h3 className='competitioninfo title '> Bridge </h3>
               <div className='competitioninfo description'> Description: Hosted by Team Millennia (Seasons 2 and 3 of America's Best Dance Crew) and Happiness is NOW, The Bridge Dance Competition features hip hop dance crews from all over the nation and provides a platform for the nation's youth to pursue their passions. </div>
               <div className='competitioninfo location'> Location: Anaheim</div>
-              <div className='competitioninfo teams'> Teams: Chaotic3, Ascension</div>
-              
+              <div className='competitioninfo teams'> Teams: <Link to='/teams/0'>Chaotic3</Link>, <Link to='/teams'>Ascension</Link></div>
             </div>
           </div>
         </div>

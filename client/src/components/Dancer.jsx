@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import DancerInfo from './DancerInfo.jsx';
 import Dancers from './Dancers.jsx';
-import { Switch, Route, Link } from 'react-router-dom';
+import Competitions from './Competition.jsx'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 import VideoModal from './VideoModal.jsx';
 
 
@@ -31,8 +33,6 @@ class Dancer extends React.Component {
 
 
   render() {
-    let dancerLink = '/dancer/' + this.props.dancer.id
-    console.log(dancerLink)
     return (
       <div className='container dancers' >
         <div className="jumbotron p-3 p-md-5 rounded border border-danger">
@@ -41,9 +41,9 @@ class Dancer extends React.Component {
               <img src={this.props.dancer.profilePic} className="img-thumbnail" alt="dancer" width="200" height="200" />
             </div>
             <div className=" col-md-9 dancerinfo">
-              <Link to = '/dancers' className='dancerinfo name'> {this.props.dancer.name}</Link>
+              <Link to={`/dancers/${this.props.dancer.id}`} params={{dancer: this.props.dancer}} className='dancerinfo name'> {this.props.dancer.name}</Link>
               <div className='dancerinfo currteam'>Current Team: {this.props.dancer.currentTeam}</div>
-              <div className='dancerinfo prevteam'>Previous Team: {this.props.dancer.previousTeam}</div>
+              <div className='dancerinfo prevteam'>Previous Team: <Link to = '/teams'>{this.props.dancer.previousTeam}</Link></div>
               <div className='dancerinfo currjob'> Current Job: {this.props.dancer.currentJob}</div>
               <div className='dancerinfo rating'> Rating: {this.props.dancer.rating}/5.0</div>
               <div onClick={this.openModal} className='dancerinfo videos'> Videos: {this.props.dancer.choreoSong}</div>
@@ -54,6 +54,7 @@ class Dancer extends React.Component {
                   closeModal = {this.closeModal}
                 />
               )}
+
             </div>
           </div>
         </div>
